@@ -1,3 +1,5 @@
+import { ListsComponent } from './../components/lists.component';
+import { AddPage } from './../pages/add/add.component';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -12,13 +14,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 // Services
 import { WishesService } from '../services/wishes.service';
+import { CompletedFilterPipe } from '../pipes/completed-filter/completed-filter';
 
 @NgModule({
   declarations: [
     MyApp,
     TabsPage,
     PendingPage,
-    FinishedPage
+    FinishedPage,
+    AddPage,
+    CompletedFilterPipe,
+    ListsComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +35,8 @@ import { WishesService } from '../services/wishes.service';
     MyApp,
     TabsPage,
     PendingPage,
-    FinishedPage
+    FinishedPage,
+    AddPage
   ],
   providers: [
     StatusBar,
